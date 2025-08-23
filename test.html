@@ -1,29 +1,324 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CHAY DEMO - Khang</title>
-  <link rel="icon" type="image/png" href="images/user.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f9fcff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Profile Section */
+    .profile {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #00aaff;
+      object-fit: cover;
+    }
+    .profile h1 {
+      margin: 15px 0 5px;
+      color: #0077b6;
+    }
+    .profile h3 {
+      font-weight: 400;
+      color: #555;
+    }
+    .profile p {
+      max-width: 600px;
+      margin: 15px auto;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Social Links */
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: transform 0.2s;
+    }
+    .socials a i {
+      margin-right: 8px;
+      color: #00aaff;
+    }
+    .socials a:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Section */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      color: #005f8d;
+      margin-bottom: 10px;
+    }
+    section p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      gap: 25px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-content {
+      padding: 20px;
+    }
+    .project-content h3 {
+      margin: 0 0 10px;
+      color: #0077b6;
+    }
+    .project-content p {
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .tags {
+      margin-bottom: 15px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 5px 12px;
+      margin: 3px;
+      background: #e6f7ff;
+      color: #0077b6;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .buttons a {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .buttons a.demo {
+      background: #00aaff;
+      color: white;
+    }
+    .buttons a.code {
+      background: #f0f0f0;
+      color: #333;
+    }
+    .buttons a:hover {
+      opacity: 0.9;
+    }
+
+    /* Articles */
+    .articles {
+      display: grid;
+      gap: 25px;
+    }
+    .article-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .article-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .article-content {
+      padding: 20px;
+    }
+    .article-content .category {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #e6f7ff;
+      color: #0077b6;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .article-content h3 {
+      margin: 0 0 10px;
+      color: #222;
+    }
+    .article-content p {
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .article-meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+    .read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(to top, #f0faff, #ffffff);
+      margin-top: 50px;
+    }
+    footer .tagline {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    footer .copyright {
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="profile-card">
-      <img src="images/KHANG-WHITE.jpeg" alt="Avatar" class="avatar">
-      <h1>Khưu Khang</h1>
-      <p class="tagline">Lập trình viên | Nhà nghiên cứu trẻ | Thích sáng tạo</p>
 
-      <div class="social-links">
-        <a href="https://github.com/SevKan10" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com/khang.khangkhuu" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/kkhang_10/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@SevKan1007" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.tiktok.com/@khuukhang10" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
+  <!-- Profile -->
+  <div class="profile">
+    <img src="Profile Page/images/KHANG-WHITE.jpeg" alt="My Avatar">
+    <h1>SevKan</h1>
+    <h3>---</h3>
+    <p>
+---
+    </p>
   </div>
+
+  <!-- Social Links -->
+  <div class="socials">
+    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="#"><i class="fas fa-comment"></i> Zalo</a>
+    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> Email</a>
+  </div>
+
+  <!-- Projects -->
+  <section>
+    <h2>Featured Projects</h2>
+    <p>Here are some of my recent projects that showcase my skills and passion for development.</p>
+    <div class="projects">
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <div class="project-content">
+          <h3>Mobile Application</h3>
+          <p>Cross-platform mobile app with native performance and beautiful animations.</p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Firebase</span>
+          </div>
+          <div class="buttons">
+            <a href="#" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="#" class="code"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <div class="project-content">
+          <h3>E-Commerce Platform</h3>
+          <p>Full-stack e-commerce solution with payment integration and modern UI.</p>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="buttons">
+            <a href="#" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="#" class="code"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section>
+    <h2>Articles</h2>
+    <p>Some of my writings and tutorials about programming and technology.</p>
+    <div class="articles">
+
+      <!-- Article 1 -->
+      <div class="article-card">
+        <img src="article1.jpg" alt="Article 1">
+        <div class="article-content">
+          <span class="category">Programming</span>
+          <h3>Best Practices for Clean Code</h3>
+          <p>Essential principles and practices for writing clean, readable, and maintainable code. Tips from industry experts and real-world experience.</p>
+          <div class="article-meta">
+            <i class="far fa-calendar-alt"></i> Dec 5, 2023 &nbsp; | &nbsp; <i class="far fa-clock"></i> 6 min read
+          </div>
+          <a href="#" class="read-btn"><i class="fas fa-external-link-alt"></i> Read Article</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="tagline">Let's build something amazing together</p>
+    <p class="copyright">© 2023 John Developer. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
