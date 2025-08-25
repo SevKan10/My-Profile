@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link rel="icon" type="image/png" href="images/user.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <button onclick="setLanguage('vi')"><img src="https://flagcdn.com/w20/vn.png" alt="Tiếng Việt"></button>
+    <button onclick="setLanguage('en')"><img src="https://flagcdn.com/w20/gb.png" alt="English"></button>
+  </div>
+
+  <!-- Profile -->
+  <div class="profile">
+    <img src="images/KHANG-WHITE.jpeg" alt="My Avatar">
+    <h1 data-en="KHUU TRIEU MINH KHANG" data-vi="KHƯU TRIỀU MINH KHANG">KHUU TRIEU MINH KHANG</h1>
+    <h1>(SevKan)</h1>
+    <h3 data-en="Future Engineer & Embedded Systems Enthusiast" data-vi="Kỹ sư tương lai & Đam mê Hệ thống nhúng">
+      Aspiring Engineer & Embedded Systems Enthusiast
+    </h3>
+  </div>
+
+  <!-- Social Links -->
+  <section>
+    <h2 data-en="<i class='fa-solid fa-circle-info'></i> Information"data-vi="<i class='fa-solid fa-circle-info'></i> Thông tin">
+      <i class="fa-solid fa-circle-info"></i> Information
+    </h2>
+    <div class="socials">
+      <a href="https://www.facebook.com/khang.khangkhuu"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/kkhang_10"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://zalo.me/0866207887"><i class="fa-solid fa-comment"></i> Zalo</a>
+      <a href="https://www.tiktok.com/@khuukhang10"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="https://github.com/SevKan10"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:khangkhu10727@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2 data-en="<i class='fa-solid fa-school'></i> Education" data-vi="<i class='fa-solid fa-school'></i> Học vấn">
+      <i class="fa-solid fa-school"></i> Education
+    </h2>
+    <div class="project-card">
+      <img src="images/logomobile.png" alt="CTU">
+      <div class="project-content">
+        <h3 data-en="College of Engineering Can Tho University (2025-2029)" data-vi="Trường Bách khoa - Đại học Cần Thơ (2025-2029)">
+          College of Engineering Can Tho University (2025-2029)
+        </h3>
+        <h4 data-en="Electronics and Telecommunications Engineering" data-vi="Kỹ thuật Điện tử - Viễn thông">
+          Electronics and Telecommunications Engineering
+        </h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2 data-en="<i class='fa-solid fa-diagram-project'></i> Featured Projects" data-vi="<i class='fa-solid fa-diagram-project'></i> Dự án tiêu biểu">
+      <i class="fa-solid fa-diagram-project"></i> Featured Projects
+    </h2>
+    <p data-en="Here are some of my projects that showcase my skills and passion for development and electronic." data-vi="Một số dự án tiêu biểu thể hiện kỹ năng và niềm đam mê của tôi trong phát triển và điện tử.">
+      Here are some of my projects that showcase my skills and passion for development and electronic.
+    </p>
+    <div class="projects">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1">
+        <div class="project-content">
+          <h3 data-en="Smart Helmet" data-vi="Mũ bảo hiểm thông minh">Smart Helmet</h3>
+          <p data-en="Traffic accident warning device" data-vi="Thiết bị cảnh báo tai nạn giao thông">
+            Traffic accident warning device
+          </p>
+          <div class="tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">ESP32</span>
+            <span class="tag">Module SIM</span>
+          </div>
+          <div class="buttons">
+            <a href="https://thanhnien.vn/doc-dao-mu-bao-hiem-tu-cau-cuu-va-chong-trom-cua-hoc-sinh-mien-tay-185230906113554426.htm" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="https://github.com/SevKan10/Helmet" class="code"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2">
+        <div class="project-content">
+          <h3 data-en="Medical Examination Registration and Management System" data-vi="Hệ thống quản lý và đăng ký khám bệnh">Medical Examination Registration and Management System</h3>
+          <p data-en="Automated registration solution with reduced load and modern UI."data-vi="Giải pháp đăng ký tự động giúp giảm tải và giao diện hiện đại.">
+            Automated registration solution with reduced load and modern UI.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Embedded system</span>
+          </div>
+          <div class="buttons">
+            <a href="about:blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="https://github.com/SevKan10/MedEx" class="code"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/project3.jpeg" alt="Project 3">
+        <div class="project-content">
+          <h3 data-en="Equipment For The Disabled" data-vi="Thiết bị dành cho người khuyết tật">
+            Equipment For The Disabled
+          </h3>
+          <p data-en="Help people with disabilities become more confident, demonstrate their ability to help their families and develop society"data-vi="Giúp người khuyết tật tự tin hơn, thể hiện được năng lực giúp đỡ gia đình họ và phát triển xã hội.">
+            Help people with disabilities become more confident, demonstrate their ability to help their families and develop society
+          </p>
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+            <span class="tag">Embedded system</span>
+          </div>
+          <div class="buttons">
+            <a href="about:blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="https://github.com/SevKan10/KOTASTU" class="code"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section>
+    <h2 data-en="<i class='fa-solid fa-newspaper'></i> Articles"
+      data-vi="<i class='fa-solid fa-newspaper'></i> Bài viết">
+      <i class="fa-solid fa-newspaper"></i> Articles
+    </h2>
+    <p data-en="Some articles about me" data-vi="Một số bài báo về tôi">Some articles about me</p>
+    <div class="articles">
+      <!-- Article 1 -->
+      <div class="article-card">
+        <img src="images/project1.png" alt="Article 1">
+        <div class="article-content">
+          <span class="category">Programming</span>
+          <span class="category">Embedded system</span>
+          <h3 data-en="Unique 'self-rescue' and anti-theft helmet of Western students"
+            data-vi="Mũ bảo hiểm 'tự cầu cứu' và chống trộm độc đáo của học sinh miền Tây">
+            Unique 'self-rescue' and anti-theft helmet of Western students
+          </h3>
+          <p data-en="Essential principles and practices for writing clean, readable, and maintainable code. Tips from industry experts and real-world experience."
+            data-vi="Nguyên tắc và thực hành quan trọng để viết code sạch, dễ đọc và dễ bảo trì. Chia sẻ từ chuyên gia và kinh nghiệm thực tế.">
+            Essential principles and practices for writing clean, readable, and maintainable code. Tips from industry
+            experts and real-world experience.
+          </p>
+          <div class="article-meta">
+            <i class="far fa-calendar-alt"></i> Sep 6, 2023 &nbsp; | &nbsp; <i class="far fa-clock"></i> 6 min read
+          </div>
+          <a href="https://thanhnien.vn/doc-dao-mu-bao-hiem-tu-cau-cuu-va-chong-trom-cua-hoc-sinh-mien-tay-185230906113554426.htm"
+            class="read-btn"><i class="fas fa-external-link-alt"></i> Read Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="tagline" data-en="Contact me now!" data-vi="Liên hệ với tôi ngay!">Contact me now!</p>
+    <p class="copyright">© 2025 SevKan. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
