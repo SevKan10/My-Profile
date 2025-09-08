@@ -64,28 +64,29 @@ body {
   font-size: 16px;
 }
 
-/* Personal Information */
+/* Personal Information - Updated to center and stack vertically */
 .personal-info {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   margin: 20px auto 30px;
-  max-width: 600px;
+  max-width: 500px;
   padding: 0 20px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: white;
   padding: 12px 20px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
   font-weight: 500;
   color: #333;
-  min-width: 250px;
+  width: 100%;
+  max-width: 350px;
   justify-content: center;
   transition: transform 0.2s ease;
 }
@@ -97,10 +98,12 @@ body {
 .info-item i {
   color: #00aaff;
   font-size: 16px;
+  flex-shrink: 0;
 }
 
 .info-item span {
   font-size: 14px;
+  text-align: center;
 }
 
 /* Social Links */
@@ -486,15 +489,6 @@ footer .copyright {
     height: 60px;
     font-size: 24px;
   }
-
-  .personal-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-item {
-    min-width: 200px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -529,7 +523,7 @@ footer .copyright {
   }
 
   .info-item {
-    min-width: 180px;
+    max-width: 300px;
     padding: 10px 15px;
   }
 
