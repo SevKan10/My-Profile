@@ -641,17 +641,54 @@ footer .copyright {
 }
 
 
+.certificate-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+
+
 .certificate-btn {
-  display: inline-flex;
+  flex: 1;
+
+  display: flex;
 
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
 
   text-decoration: none;
 
-  color: #0077b6;
-
+  font-size: 14px;
   font-weight: 500;
 
-  font-size: 14px;
+  background: #00aaff;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+
+.certificate-btn.secondary {
+  background: #00aaff;
+  color: white;
+}
+
+
+.certificate-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+.certificate-btn.secondary:hover {
+  transform: translateY(-2px);
 }
