@@ -678,17 +678,85 @@ footer .copyright {
 }
 
 
-.certificate-btn.secondary {
-  background: #00aaff;
-  color: white;
+/* ===== CERTIFICATES ===== */
+
+.certificates {
+  display: grid;
+  gap: 25px;
+}
+
+.certificate-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  overflow: hidden;
+  position: relative;
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.certificate-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+/* image zoom */
+.certificate-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  padding: 20px;
+  background: #f8fbff;
+
+  transition: transform 0.4s ease;
+}
+
+.certificate-card:hover img{
+  transform: scale(1.03);
+}
+
+/* ===== EDUCATION + PROJECTS HOVER ===== */
+.project-card{
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.project-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
 }
 
 
-.certificate-btn:hover {
-  transform: translateY(-2px);
+/* image zoom */
+.project-card img{
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img{
+  transform: scale(1.03);
 }
 
 
-.certificate-btn.secondary:hover {
-  transform: translateY(-2px);
+/* ===== ARTICLES HOVER ===== */
+.article-card{
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.article-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+
+/* image zoom */
+.article-card img{
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover img{
+  transform: scale(1.03);
 }
