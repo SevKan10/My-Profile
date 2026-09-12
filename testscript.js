@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){setLanguage("vi")});function setLanguage(e){document.querySelectorAll("[data-en]").forEach(t=>{t.innerHTML=t.getAttribute("data-"+e)})}
