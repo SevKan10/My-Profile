@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hồ sơ cá nhân - SevKan</title>
+  <meta name="description" content="Portfolio của Khưu Triều Minh Khang - sinh viên Kỹ thuật Điện tử - Viễn thông, đam mê hệ thống nhúng và phát triển sản phẩm công nghệ." />
+  <meta name="author" content="Khưu Triều Minh Khang" />
+  <meta property="og:title" content="Khưu Triều Minh Khang | SevKan" />
+  <meta property="og:description" content="Portfolio cá nhân về hệ thống nhúng, thiết kế mạch và các dự án công nghệ." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/Khang.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Khưu Triều Minh Khang | SevKan</title>
   <link rel="icon" type="image/png" href="images/user.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -18,19 +25,37 @@
     <button onclick="setLanguage('vi')"><img src="https://flagcdn.com/w20/vn.png" alt="Tiếng Việt"></button>
     <button onclick="setLanguage('en')"><img src="https://flagcdn.com/w20/gb.png" alt="English"></button>
   </div>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Chuyển chế độ tối">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+  <nav class="site-nav" aria-label="Điều hướng chính">
+    <a href="#about"><i class="fa-solid fa-house"></i><span data-en="About" data-vi="Giới thiệu">Giới thiệu</span></a>
+    <a href="#skills"><i class="fa-solid fa-code"></i><span data-en="Skills" data-vi="Kỹ năng">Kỹ năng</span></a>
+    <a href="#projects"><i class="fa-solid fa-diagram-project"></i><span data-en="Projects" data-vi="Dự án">Dự án</span></a>
+    <a href="#journey"><i class="fa-solid fa-route"></i><span data-en="Journey" data-vi="Hành trình">Hành trình</span></a>
+    <a href="#achievements"><i class="fa-solid fa-trophy"></i><span data-en="Achievements" data-vi="Thành tựu">Thành tựu</span></a>
+    <a href="#contact"><i class="fa-solid fa-paper-plane"></i><span data-en="Contact" data-vi="Liên hệ">Liên hệ</span></a>
+  </nav>
 
   <!-- Profile -->
-  <div class="profile">
-    <img src="images/KHANG-WHITE.jpeg" alt="My Avatar">
+  <div class="profile" id="about">
+    <img src="images/Khang.jpg" alt="Ảnh đại diện của Khưu Triều Minh Khang">
     <h1 data-en="KHUU TRIEU MINH KHANG" data-vi="KHƯU TRIỀU MINH KHANG">KHƯU TRIỀU MINH KHANG</h1>
     <h1>(SevKan)</h1>
     <h3 data-en="Future Engineer & Embedded Systems Enthusiast" data-vi="Kỹ sư tương lai & Đam mê Hệ thống nhúng">
       Kỹ sư tương lai & Đam mê Hệ thống nhúng
     </h3>
+    <p class="hero-description" data-en="Electronics and Telecommunications Engineering student who enjoys turning practical ideas into embedded products, circuit designs and useful digital experiences." data-vi="Sinh viên Kỹ thuật Điện tử - Viễn thông, đam mê biến những ý tưởng thực tế thành sản phẩm hệ thống nhúng, thiết kế mạch và trải nghiệm số hữu ích.">
+      Sinh viên Kỹ thuật Điện tử - Viễn thông, đam mê biến những ý tưởng thực tế thành sản phẩm hệ thống nhúng, thiết kế mạch và trải nghiệm số hữu ích.
+    </p>
+    <div class="hero-actions">
+      <a class="hero-btn primary" href="#projects"><i class="fa-solid fa-arrow-down"></i><span data-en="Explore projects" data-vi="Xem dự án">Xem dự án</span></a>
+      <a class="hero-btn secondary" href="mailto:khangkhu10727@gmail.com?subject=CV%20request%20-%20SevKan"><i class="fa-solid fa-file-arrow-down"></i><span data-en="Request my CV" data-vi="Nhận CV của tôi">Nhận CV của tôi</span></a>
+    </div>
   </div>
 
   <!-- Social Links -->
-  <section>
+  <section id="information">
     <h2 data-en="<i class='fa-solid fa-circle-info'></i> Information" data-vi="<i class='fa-solid fa-circle-info'></i> Thông tin">
       <i class="fa-solid fa-circle-info"></i> Thông tin
     </h2>
@@ -64,7 +89,7 @@
   </section>
 
   <!-- Education -->
-  <section>
+  <section id="education">
     <h2 data-en="<i class='fa-solid fa-school'></i> Education" data-vi="<i class='fa-solid fa-school'></i> Học vấn">
       <i class="fa-solid fa-school"></i> Học vấn
     </h2>
@@ -79,10 +104,30 @@
         </h4>
       </div>
     </div>
+    <div class="study-progress">
+      <div class="progress-heading">
+        <div>
+          <span class="progress-kicker" data-en="Academic progress" data-vi="Tiến độ học tập">Tiến độ học tập</span>
+          <h3 data-en="Course 51 · Electronics and Telecommunications Engineering" data-vi="Khóa 51 · Kỹ thuật Điện tử - Viễn thông">Khóa 51 · Kỹ thuật Điện tử - Viễn thông</h3>
+        </div>
+        <strong id="studyProgressValue">0%</strong>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Tiến độ học tập">
+        <span id="studyProgressBar"></span>
+      </div>
+      <div class="progress-meta">
+        <span><i class="fa-regular fa-calendar"></i> <span data-en="Started Sep 2025" data-vi="Bắt đầu 09/2025">Bắt đầu 09/2025</span></span>
+        <span id="studyProgressStatus" data-en="Calculating progress..." data-vi="Đang tính tiến độ...">Đang tính tiến độ...</span>
+        <span><i class="fa-regular fa-calendar-check"></i> <span data-en="Expected Jun 2030" data-vi="Dự kiến 06/2030">Dự kiến 06/2030</span></span>
+      </div>
+      <p class="progress-note" data-en="Estimated by elapsed time in the 2025–2030 program, not by completed credits." data-vi="Tiến độ ước tính theo thời gian đã học trong chương trình 2025–2030, không đại diện cho số tín chỉ đã hoàn thành.">
+        Tiến độ ước tính theo thời gian đã học trong chương trình 2025–2030, không đại diện cho số tín chỉ đã hoàn thành.
+      </p>
+    </div>
   </section>
 
 <!-- Certificates -->
-<section>
+<section id="certificates">
   <h2 data-en="<i class='fa-solid fa-certificate'></i> Certificates"
       data-vi="<i class='fa-solid fa-certificate'></i> Chứng chỉ">
     <i class="fa-solid fa-certificate"></i> Chứng chỉ
@@ -137,7 +182,7 @@
 </section>
 
   <!-- Skills -->
-  <section>
+  <section id="skills">
     <h2 data-en="<i class='fa-solid fa-code'></i> Skills & Tools" data-vi="<i class='fa-solid fa-code'></i> Kỹ năng & Công cụ">
       <i class="fa-solid fa-code"></i> Kỹ năng & Công cụ
     </h2>
@@ -213,17 +258,37 @@
     </div>
   </section>
 
+  <section id="github" hidden>
+    <h2 data-en="<i class='fab fa-github'></i> GitHub activity" data-vi="<i class='fab fa-github'></i> Hoạt động GitHub"><i class="fab fa-github"></i> Hoạt động GitHub</h2>
+    <p data-en="A quick look at my public GitHub profile and selected repositories." data-vi="Tổng quan nhanh về hồ sơ GitHub công khai và các repository tiêu biểu của tôi.">Tổng quan nhanh về hồ sơ GitHub công khai và các repository tiêu biểu của tôi.</p>
+    <div class="github-stats" id="githubStats">
+      <div class="github-stat"><strong id="repoCount">--</strong><span data-en="Repositories" data-vi="Repository">Repository</span></div>
+      <div class="github-stat"><strong id="followerCount">--</strong><span data-en="Followers" data-vi="Người theo dõi">Người theo dõi</span></div>
+      <div class="github-stat"><strong id="followingCount">--</strong><span data-en="Following" data-vi="Đang theo dõi">Đang theo dõi</span></div>
+    </div>
+    <div class="github-repos" id="githubRepos">
+      <p class="github-status" data-en="Loading GitHub data..." data-vi="Đang tải dữ liệu GitHub...">Đang tải dữ liệu GitHub...</p>
+    </div>
+    <a class="hero-btn secondary github-profile-link" href="https://github.com/SevKan10" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span data-en="View full GitHub profile" data-vi="Xem hồ sơ GitHub">Xem hồ sơ GitHub</span></a>
+  </section>
+
   <!-- Projects -->
-  <section>
+  <section id="projects">
     <h2 data-en="<i class='fa-solid fa-diagram-project'></i> Featured Projects" data-vi="<i class='fa-solid fa-diagram-project'></i> Dự án tiêu biểu">
       <i class="fa-solid fa-diagram-project"></i> Dự án tiêu biểu
     </h2>
     <p data-en="Here are some of my projects that showcase my skills and passion for development and electronic." data-vi="Một số dự án tiêu biểu thể hiện kỹ năng và niềm đam mê của tôi trong phát triển và điện tử.">
       Một số dự án tiêu biểu thể hiện kỹ năng và niềm đam mê của tôi trong phát triển và điện tử.
     </p>
+    <div class="project-filters" role="group" aria-label="Lọc dự án">
+      <button class="filter-btn active" type="button" data-filter="all" data-en="All" data-vi="Tất cả">Tất cả</button>
+      <button class="filter-btn" type="button" data-filter="embedded" data-en="Embedded" data-vi="Hệ thống nhúng">Hệ thống nhúng</button>
+      <button class="filter-btn" type="button" data-filter="web" data-en="Web" data-vi="Web">Web</button>
+      <button class="filter-btn" type="button" data-filter="design" data-en="Design" data-vi="Thiết kế">Thiết kế</button>
+    </div>
     <div class="projects">
       <!-- Project 1 -->
-      <div class="project-card">
+      <div class="project-card" data-category="embedded">
         <img src="images/project1.png" alt="Project 1">
         <div class="project-content">
           <h3 data-en="Smart Helmet" data-vi="Mũ bảo hiểm thông minh">Mũ bảo hiểm thông minh</h3>
@@ -236,6 +301,7 @@
             <span class="tag">Module SIM</span>
           </div>
           <div class="buttons">
+            <button class="details-btn" type="button" data-project="helmet"><i class="fa-solid fa-circle-info"></i> Chi tiết</button>
             <a href="https://thanhnien.vn/doc-dao-mu-bao-hiem-tu-cau-cuu-va-chong-trom-cua-hoc-sinh-mien-tay-185230906113554426.htm" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
             <a href="https://github.com/SevKan10/Helmet" target="_blank" class="code"><i class="fab fa-github"></i> Code</a>
           </div>
@@ -243,7 +309,7 @@
       </div>
 
       <!-- Project 2 -->
-      <div class="project-card">
+      <div class="project-card" data-category="web">
         <img src="images/project2.png" alt="Project 2">
         <div class="project-content">
           <h3 data-en="Medical Examination Registration and Management System" data-vi="Hệ thống quản lý và đăng ký khám bệnh">Hệ thống quản lý và đăng ký khám bệnh</h3>
@@ -260,6 +326,7 @@
             <span class="tag">Embedded system</span>
           </div>
           <div class="buttons">
+            <button class="details-btn" type="button" data-project="medical"><i class="fa-solid fa-circle-info"></i> Chi tiết</button>
             <a href="https://medical-examiner-40e4d.web.app/" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo Sign up</a>
             <a href="https://doctors-e0601.web.app/" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo Admin</a>
             <a href="https://github.com/SevKan10/MedEx " target="_blank" class="code"><i class="fab fa-github"></i> Code</a>
@@ -268,7 +335,7 @@
       </div>
 
       <!-- Project 3 -->
-      <div class="project-card">
+      <div class="project-card" data-category="embedded">
         <img src="images/project3.jpeg" alt="Project 3">
         <div class="project-content">
           <h3 data-en="Equipment For The Disabled" data-vi="Thiết bị dành cho người khuyết tật">
@@ -283,6 +350,7 @@
             <span class="tag">Embedded system</span>
           </div>
           <div class="buttons">
+            <button class="details-btn" type="button" data-project="assistive"><i class="fa-solid fa-circle-info"></i> Chi tiết</button>
             <a href="about:blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
             <a href="https://github.com/SevKan10/KOTASTU" target="_blank" class="code"><i class="fab fa-github"></i> Code</a>
           </div>
@@ -290,7 +358,7 @@
       </div>
 
       <!-- Project 4 -->
-      <div class="project-card">
+      <div class="project-card" data-category="design">
         <img src="images/project4.jpg" alt="Project 4">
         <div class="project-content">
           <h3 data-en="Self Balancing Car" data-vi="Xe tự động cân bằng">
@@ -308,6 +376,7 @@
             <span class="tag">3D Design</span>
           </div>
           <div class="buttons">
+            <button class="details-btn" type="button" data-project="car"><i class="fa-solid fa-circle-info"></i> Chi tiết</button>
             <a href="https://www.tiktok.com/@khuukhang10/video/7547558351849278727?lang=vi-VN" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
             <a href="https://github.com/SevKan10/esp32-car_balance" target="_blank" class="code"><i class="fab fa-github"></i> Code</a>
           </div>
@@ -316,8 +385,97 @@
     </div>
   </section>
 
+  <!-- Journey -->
+  <section id="journey">
+    <h2 data-en="<i class='fa-solid fa-route'></i> My Journey" data-vi="<i class='fa-solid fa-route'></i> Hành trình phát triển"><i class="fa-solid fa-route"></i> Hành trình phát triển</h2>
+    <p data-en="A few milestones in my learning and making journey." data-vi="Một vài dấu mốc trong hành trình học tập và sáng tạo của tôi.">Một vài dấu mốc trong hành trình học tập và sáng tạo của tôi.</p>
+    <div class="timeline">
+      <div class="timeline-item"><span>2023</span><div><h3 data-en="Smart Helmet project" data-vi="Dự án Mũ bảo hiểm thông minh">Dự án Mũ bảo hiểm thông minh</h3><p data-en="Built a traffic accident warning and anti-theft device." data-vi="Phát triển thiết bị cảnh báo tai nạn giao thông và chống trộm.">Phát triển thiết bị cảnh báo tai nạn giao thông và chống trộm.</p></div></div>
+      <div class="timeline-item"><span>2025</span><div><h3 data-en="Started at Can Tho University" data-vi="Bắt đầu học tại Đại học Cần Thơ">Bắt đầu học tại Đại học Cần Thơ</h3><p data-en="Studying Electronics and Telecommunications Engineering." data-vi="Theo học ngành Kỹ thuật Điện tử - Viễn thông.">Theo học ngành Kỹ thuật Điện tử - Viễn thông.</p></div></div>
+      <div class="timeline-item"><span data-en="Sep 2025 – Mar 2026" data-vi="09/2025 – 03/2026">09/2025 – 03/2026</span><div><h3 data-en="IoT 3D Design at TekNix Branch Can Tho" data-vi="IoT 3D Design tại TekNix Branch Cần Thơ">IoT 3D Design tại TekNix Branch Cần Thơ</h3><p data-en="Worked at TekNix Branch Can Tho as an IoT 3D Design specialist, combining Internet of Things concepts with 3D design and prototyping." data-vi="Làm việc tại TekNix Branch Cần Thơ với vị trí IoT 3D Design, kết hợp kiến thức Internet of Things với thiết kế 3D và phát triển nguyên mẫu.">Làm việc tại TekNix Branch Cần Thơ với vị trí IoT 3D Design, kết hợp kiến thức Internet of Things với thiết kế 3D và phát triển nguyên mẫu.</p></div></div>
+      <div class="timeline-item"><span>2026</span><div><h3 data-en="Earned SOLIDWORKS CSWP" data-vi="Đạt chứng chỉ SOLIDWORKS CSWP">Đạt chứng chỉ SOLIDWORKS CSWP</h3><p data-en="Professional certification in 3D design and assembly." data-vi="Chứng chỉ chuyên nghiệp về thiết kế 3D và lắp ráp.">Chứng chỉ chuyên nghiệp về thiết kế 3D và lắp ráp.</p></div></div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2 data-en="<i class='fa-solid fa-trophy'></i> Achievements" data-vi="<i class='fa-solid fa-trophy'></i> Thành tựu"><i class="fa-solid fa-trophy"></i> Thành tựu</h2>
+    <p data-en="Awards, competitions and milestones from my learning and innovation journey." data-vi="Các giải thưởng, cuộc thi và dấu mốc trong hành trình học tập và sáng tạo của tôi.">
+      Các giải thưởng, cuộc thi và dấu mốc trong hành trình học tập và sáng tạo của tôi.
+    </p>
+    <div class="achievements">
+      <article class="achievement-card">
+        <div class="achievement-year">2023</div>
+        <img src="docs/480304693_1181668550128323_7816563039416192120_n.jpg" alt="Tham gia Solve for Tomorrow 2023">
+        <div class="achievement-content">
+          <span class="achievement-type">Solve for Tomorrow</span>
+          <h3 data-en="Top 40 - Samsung Solve for Tomorrow 2023" data-vi="Top 40 - Cuộc thi Solve for Tomorrow 2023 của Samsung">Top 40 - Cuộc thi Solve for Tomorrow 2023 của Samsung</h3>
+          <p data-en="Reached the Top 40 teams in Samsung's national innovation competition." data-vi="Đạt Top 40 đội thi trong cuộc thi sáng tạo cấp quốc gia của Samsung.">Đạt Top 40 đội thi trong cuộc thi sáng tạo cấp quốc gia của Samsung.</p>
+          <div class="achievement-gallery">
+            <a href="docs/480304693_1181668550128323_7816563039416192120_n.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/480304693_1181668550128323_7816563039416192120_n.jpg" alt="Hoạt động Solve for Tomorrow 2023"></a>
+            <a href="docs/480361016_1181669376794907_2939228986033048039_n.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/480361016_1181669376794907_2939228986033048039_n.jpg" alt="Chứng nhận Solve for Tomorrow 2023"></a>
+            <a href="docs/480295303_1181669436794901_2627360317964458505_n.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/480295303_1181669436794901_2627360317964458505_n.jpg" alt="Hoạt động nhóm Solve for Tomorrow 2023"></a>
+            <a href="docs/480767524_1181669573461554_7567024916209864780_n.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/480767524_1181669573461554_7567024916209864780_n.jpg" alt="Trình bày tại Solve for Tomorrow 2023"></a>
+          </div>
+          <a class="achievement-link" href="docs/SFT2023_1.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> <span data-en="View evidence" data-vi="Xem minh chứng">Xem minh chứng</span></a>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-year">2023</div>
+        <img src="docs/480213603_1180499366911908_5704844759935837443_n.jpg" alt="Hội thi Tin học trẻ thành phố Cần Thơ 2023">
+        <div class="achievement-content">
+          <span class="achievement-type">Information Technology</span>
+          <h3 data-en="Second Prize - Can Tho Young Informatics Contest, D3" data-vi="Giải Nhì - Hội thi Tin học trẻ thành phố Cần Thơ, Bảng D3">Giải Nhì - Hội thi Tin học trẻ thành phố Cần Thơ, Bảng D3</h3>
+          <p data-en="Won Second Prize in the city-level Young Informatics Contest." data-vi="Đạt giải Nhì tại Hội thi Tin học trẻ cấp thành phố.">Đạt giải Nhì tại Hội thi Tin học trẻ cấp thành phố.</p>
+          <div class="achievement-gallery">
+            <a href="docs/480213603_1180499366911908_5704844759935837443_n.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/480213603_1180499366911908_5704844759935837443_n.jpg" alt="Hội thi Tin học trẻ thành phố Cần Thơ 2023"></a>
+          </div>
+          <a class="achievement-link" href="docs/THT_2023.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> <span data-en="View evidence" data-vi="Xem minh chứng">Xem minh chứng</span></a>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-year">2024</div>
+        <img src="docs/logosevkan2.png" alt="SevKan logo">
+        <div class="achievement-content">
+          <span class="achievement-type">Solve for Tomorrow</span>
+          <h3 data-en="Top 40 - Samsung Solve for Tomorrow 2024" data-vi="Top 40 - Cuộc thi Solve for Tomorrow 2024 của Samsung">Top 40 - Cuộc thi Solve for Tomorrow 2024 của Samsung</h3>
+          <p data-en="Returned to the Top 40 in Samsung's national innovation competition." data-vi="Tiếp tục đạt Top 40 trong cuộc thi sáng tạo cấp quốc gia của Samsung.">Tiếp tục đạt Top 40 trong cuộc thi sáng tạo cấp quốc gia của Samsung.</p>
+          <a class="achievement-link" href="docs/SFT2024_1.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> <span data-en="View evidence" data-vi="Xem minh chứng">Xem minh chứng</span></a>
+        </div>
+      </article>
+
+      <article class="achievement-card achievement-card-featured">
+        <div class="achievement-year">2024</div>
+        <img src="docs/IMG_1730524677256_1758584436302.jpg" alt="Nhận giải Nhì Cuộc thi Sáng tạo dành cho Thanh thiếu niên, nhi đồng">
+        <div class="achievement-content">
+          <span class="achievement-type">National Innovation Contest</span>
+          <h3 data-en="Second Prize - National Youth Innovation Contest" data-vi="Giải Nhì - Cuộc thi Sáng tạo dành cho Thanh thiếu niên, nhi đồng cấp Quốc gia">Giải Nhì - Cuộc thi Sáng tạo dành cho Thanh thiếu niên, nhi đồng cấp Quốc gia</h3>
+          <p data-en="Received Second Prize at the 20th national youth innovation competition." data-vi="Đạt giải Nhì tại Cuộc thi Sáng tạo dành cho Thanh thiếu niên, nhi đồng toàn quốc lần thứ 20.">Đạt giải Nhì tại Cuộc thi Sáng tạo dành cho Thanh thiếu niên, nhi đồng toàn quốc lần thứ 20.</p>
+          <div class="achievement-gallery">
+            <a href="docs/IMG_20260331_205313.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/IMG_20260331_205313.jpg" alt="Bằng khen và huy chương thành tích năm 2024"></a>
+            <a href="docs/IMG_1730524677256_1758584436302.jpg" target="_blank" rel="noopener noreferrer"><img src="docs/IMG_1730524677256_1758584436302.jpg" alt="Lễ trao giải năm 2024"></a>
+          </div>
+          <a class="achievement-link" href="docs/STTTNND_2024.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> <span data-en="View certificate" data-vi="Xem bằng khen">Xem bằng khen</span></a>
+        </div>
+      </article>
+
+      <article class="achievement-card achievement-card-featured">
+        <div class="achievement-year">2026</div>
+        <img src="docs/gsa-ss2-86d8a954-5e35-4d47-940f-d329aae77b08.jpg" alt="Google Student Ambassador mùa 2">
+        <div class="achievement-content">
+          <span class="achievement-type">Google Student Ambassador</span>
+          <h3 data-en="Google Student Ambassador - Season 2" data-vi="Đại sứ sinh viên Google - Mùa 2">Đại sứ sinh viên Google - Mùa 2</h3>
+          <p data-en="Selected to become a Google Student Ambassador for the second season." data-vi="Được lựa chọn trở thành Đại sứ sinh viên Google mùa 2.">Được lựa chọn trở thành Đại sứ sinh viên Google mùa 2.</p>
+          <a class="achievement-link" href="docs/gsa-ss2-86d8a954-5e35-4d47-940f-d329aae77b08.jpg" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-image"></i> <span data-en="View image" data-vi="Xem hình ảnh">Xem hình ảnh</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- Articles -->
-  <section>
+  <section id="articles">
     <h2 data-en="<i class='fa-solid fa-newspaper'></i> Articles" data-vi="<i class='fa-solid fa-newspaper'></i> Bài viết">
       <i class="fa-solid fa-newspaper"></i> Bài viết
     </h2>
@@ -360,6 +518,27 @@
       </div>
     </div>
   </section>
+
+  <section class="contact-section" id="contact">
+    <h2 data-en="<i class='fa-solid fa-paper-plane'></i> Let's connect" data-vi="<i class='fa-solid fa-paper-plane'></i> Kết nối với tôi"><i class="fa-solid fa-paper-plane"></i> Kết nối với tôi</h2>
+    <p data-en="Have an opportunity or idea? Send me a message and I will get back to you." data-vi="Bạn có cơ hội hoặc ý tưởng muốn trao đổi? Hãy gửi tin nhắn cho tôi.">Bạn có cơ hội hoặc ý tưởng muốn trao đổi? Hãy gửi tin nhắn cho tôi.</p>
+    <form class="contact-form" action="mailto:khangkhu10727@gmail.com" method="post" enctype="text/plain">
+      <label><span data-en="Your name" data-vi="Tên của bạn">Tên của bạn</span><input type="text" name="name" required></label>
+      <label><span data-en="Your email" data-vi="Email của bạn">Email của bạn</span><input type="email" name="email" required></label>
+      <label class="full-width"><span data-en="Message" data-vi="Nội dung">Nội dung</span><textarea name="message" rows="5" required></textarea></label>
+      <button class="hero-btn primary" type="submit"><i class="fa-solid fa-paper-plane"></i><span data-en="Send message" data-vi="Gửi tin nhắn">Gửi tin nhắn</span></button>
+    </form>
+  </section>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+      <span class="modal-kicker"><i class="fa-solid fa-lightbulb"></i> SevKan project</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-tech" id="modalTech"></div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
