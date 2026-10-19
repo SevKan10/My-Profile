@@ -1134,12 +1134,18 @@ footer .copyright {
   align-items: center;
   gap: 7px;
   width: fit-content;
-  margin-top: auto;
   padding-top: 15px;
   color: var(--primary-dark);
   font-size: 0.78rem;
   font-weight: 700;
   text-decoration: none;
+}
+
+.achievement-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 14px;
+  margin-top: auto;
 }
 
 .achievement-link:hover {
